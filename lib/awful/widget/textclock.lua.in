@@ -24,7 +24,7 @@ function new(args, format, timeout)
     local timeout = timeout or 60
     args.type = "textbox"
     local theme = beautiful.get()
-    local font = args.font or theme.taglist_font or nil
+    local font = args.font or theme.taglist_font or theme.font or nil
     local w = capi.widget(args)
     local timer = capi.timer { timeout = timeout }
     local span = nil 
